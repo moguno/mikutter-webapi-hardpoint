@@ -4,7 +4,7 @@ depends:
   mikutter: 3.3.0
   plugin:
   - gui
-version: '0.0.1'
+version: '0.0.2'
 author: 
 name: mikutter-webapi-hardpoint
 description: 'Chromeとかと会話するためのWebAPIを提供する前提プラグイン。サンプル付き。'
