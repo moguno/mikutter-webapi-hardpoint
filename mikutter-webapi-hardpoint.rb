@@ -17,8 +17,9 @@ Plugin.create(:"mikutter-webapi-hardpoint") {
       # 指定されたタイトルとURLをポストボックスに突っ込む
       webapi("test") { |req, res|
         message = ">#{req.query["title"].force_encoding("UTF-8")}\n#{req.query["url"].force_encoding("UTF-8")}\n"
-        
-        Plugin[:gtk].widgetof(Plugin::GUI::Postbox::cuscaded.values.first).post.buffer.text = message
+        postbox = Plugin::GUI::Postbox.instance
+        postbox.options = {header: message, delegate_other: false}
+        Plugin::GUI::Window.instance(:default) << postbox
       }
 
       Thread.new {
