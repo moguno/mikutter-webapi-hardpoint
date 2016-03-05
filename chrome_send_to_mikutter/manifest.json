@@ -1,7 +1,8 @@
 {
   "manifest_version": 2,
   "name": "タイトルとURLをmikutterで呟く",
-  "description": "タイトルとURLをmikutterで呟く",
+  "version": "0.0.0.1",
+  "description": "タイトルとURLをmikutterで呟きます。icon.png:(c)toshi_a クリエイティブ・コモンズ 表示 - 継承 3.0 非移植",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -12,5 +13,10 @@
   "version": "1.0",
   "browser_action": {
     "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   }
 }
